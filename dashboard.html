@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Cloud Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>Your Cloud Storage</h1>
+                <div class="user-info">
+                    <span class="welcome-text">Welcome, <span id="usernameDisplay">User</span>!</span>
+                    <button onclick="logout()" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="upload-section">
+                <div class="section-header">
+                    <h2>Upload Files</h2>
+                    <p>Select files to upload to your cloud storage</p>
+                </div>
+                <form id="uploadForm" class="upload-form">
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" multiple class="file-input">
+                        <label for="fileInput" class="file-input-label">
+                            <span class="file-input-text">Choose Files</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload Files</button>
+                </form>
+                <div id="uploadMessage" class="message"></div>
+            </section>
+
+            <section class="files-section">
+                <div class="section-header">
+                    <h2>Your Files</h2>
+                    <p>Manage your stored files</p>
+                </div>
+                <div id="filesList" class="files-grid">
+                    <div class="loading">Loading your files...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
